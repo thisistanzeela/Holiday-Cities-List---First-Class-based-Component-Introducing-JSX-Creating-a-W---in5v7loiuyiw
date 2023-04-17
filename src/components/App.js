@@ -45,7 +45,7 @@ class App extends Component {
       <div id="main">
         {/* Do not remove the main div */}
          <h1>Indian Cities</h1>
-        <ol type="1">
+        <ol class="city">
           {indianCities.map((city, index) => (
             <li key={`city${index + 1}`}>{city.name}</li>
           ))}
