@@ -34,48 +34,23 @@ class App extends Component {
     { name: 'Mussoorie', country: 'India' },
     { name: 'Mount Abu', country: 'India' },
     { name: 'Tirupati', country: 'India' },
-    ];
-    
-//      const isValidCity = (city) => {
-//     const regex = /^[a-zA-Z\s]+,\s[a-zA-Z\s]+$/;
-//     return regex.test(city);
-//   };
-
-//   return (
-//     <div>
-//       <h1>Explore Domestic Tourism in India</h1>
-//       <ol type="1">
-//         {indianCities.map((city, index) => (
-//           isValidCity(city) ? (
-//             <li key={`city-${index}`}>{city}</li>
-//           ) : (
-//             <li key={`invalid-city-${index}`} style={{color: 'red'}}>Invalid City: {city}</li>
-//           )
-//         ))}
-//       </ol>
-//     </div>
-//   );
-// }
-
+       ]
   }
-
-  render() {
-    const indianCities = this.cityList.filter(
-      (city) => city.country === "India"
-    );
+render() {
     return (
       <div id="main">
         {/* Do not remove the main div */}
-         <h1>Indian Cities</h1>
-        <ol class="city">
-          {indianCities.map((city, index) => (
-            <li key={`city${index + 1}`}>{city.name}</li>
+         {this.cityList.filter(city => city.country === 'India')
+                 .map(city => (
+                    <li key={`${city.name},${city.country}`}>
+                      {city.name}
+                    </li>
           ))}
-        </ol>
       </div>
     )
   }
 }
+
 
 
 export default App;
