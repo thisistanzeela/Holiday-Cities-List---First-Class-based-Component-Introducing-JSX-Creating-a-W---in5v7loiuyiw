@@ -40,15 +40,13 @@ render() {
     return (
       <div id="main">
         {/* Do not remove the main div */}
-          <ol>
-          {this.cityList
-            .filter(city => city.country === 'India')
-            .map(city => (
-              <li key={`${city.name},${city.country}`}>
-                {city.name}
-              </li>
-            ))}
-        </ol>
+         <ol>
+        {this.cityList
+          .filter((city) => city.country === "India")
+          .map((city, index) => (
+            <li key={`location${index + 1}`}>{city.name}</li>
+          ))}
+      </ol>
       </div>
     )
   }
