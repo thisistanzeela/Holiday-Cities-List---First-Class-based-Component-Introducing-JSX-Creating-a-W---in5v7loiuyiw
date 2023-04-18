@@ -33,7 +33,7 @@ class App extends Component {
     { name: 'Amritsar', country: 'India' },
     { name: 'Mussoorie', country: 'India' },
     { name: 'Mount Abu', country: 'India' },
-    { name: 'Tirupati', country: 'India' },
+    { name: 'Tirupatiii', country: 'India' },
        ]
   }
 render() {
